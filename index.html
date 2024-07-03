@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="input-output-container">
+
+    
+        <input type="text" id="tbox-link" placeholder="Ingrese una URL, frase o palabra">
+
+   
+        <button id="create-code">Crear</button>
+
+    
+
+        <div id="container">
+          <img src="" id="qr-code">
+        </div>
+    </div>
+
+    <script>
+      let btnCode = document.getElementById("create-code");
+      let output = document.getElementById("qr-code");
+      let inputLink = document.getElementById("tbox-link");
+
+      //Inicalizando el src de output así no queda vacío 
+      output.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Hi";
+
+      btnCode.addEventListener("mousedown", () => {
+        if (inputLink.value == ""){
+          alert("Escriba algo en el campo")
+          inputLink.style.borderColor = "red";
+        } else {
+          output.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + inputLink.value;
+        }
+      })
+    </script>
+
+</body>
+</html>

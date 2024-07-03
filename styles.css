@@ -1,0 +1,66 @@
+:root {
+  --bg-color: #221d2f;
+  --white: #f2f2f2;
+  --contenedor: #5b4e7e;
+  --contenedor-sombra: #171320;
+  --bg-button: #7f71a8;
+  --button-hover-col: #b8b0cf;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    padding-top: 15px;
+}
+
+#container {
+    height: 500px;
+    width: 500px;
+    background-color: var(--contenedor);   
+    border-radius: 5%;
+    margin: 10px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 5px 5px var(--contenedor-sombra);
+}
+
+#qr-code {
+    height: 300px;
+    width: 300px;
+    background-color: white;
+}
+
+#tbox-link {
+    width: 400px;
+    height: 25px;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: var(--white);
+}
+
+#tbox-link:hover {
+  border: 1px solid red;
+}
+
+#create-code {
+    width: 90px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: hsl(39, 100%, 50%);
+    border: none;
+    background-color: var(--bg-button);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+#create-code:hover {
+    background-color: var(--button-hover-col);
+}
+
+button::after {
+    background-color: violet;
+}
